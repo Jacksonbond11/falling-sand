@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: none;
+  background-color: #121212;
+}
+
+#grid {
+  width: 900px;
+  height: 900px;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cell {
+  border: 1px solid gray;
+  border-color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+.clicked {
+  background-color: #fff;
+}
+.pending {
+  background-color: #fff;
+}
