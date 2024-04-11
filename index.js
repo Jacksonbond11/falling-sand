@@ -67,7 +67,7 @@ function sandFall(index) {
       let nextCell = document.getElementById(nextIndex.toString());
       let leftCell = document.getElementById((i - 1).toString());
       let rightCell = document.getElementById((i + 1).toString());
-
+      console.log(nextCell);
       if (
         i < 1600 &&
         currentCell &&
@@ -77,6 +77,10 @@ function sandFall(index) {
         currentCell.classList.add("bulletpending");
       }
 
+      if (!nextCell) {
+        currentCell.classList.remove("bulletpending", "bullet");
+      }
+
       if (
         nextCell &&
         !nextCell.classList.contains("bullet") &&
@@ -84,15 +88,14 @@ function sandFall(index) {
       ) {
         currentCell.classList.remove("bullet", "bulletpending");
         nextCell.classList.add("bulletpending");
-
+        console.log("first if");
         setTimeout(() => fall(nextIndex), gravity);
       } else if (nextCell.classList.contains("land")) {
         currentCell.classList.remove("bulletpending", "bullet");
         nextCell.classList.remove("land");
         leftCell.classList.remove("land");
         rightCell.classList.remove("land");
-      } else if (!nextCell || i >= 1600) {
-        currentCell.classList.remove("bulletpending", "bullet");
+        console.log("sec if");
       }
     }
 
