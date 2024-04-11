@@ -106,7 +106,11 @@ function sandFall(index) {
 //buttons
 document.getElementById("btnland").addEventListener("click", () => {
   celltype = "land";
+  document.getElementById("btnland").classList.add("selectedButton");
+  document.getElementById("btnbullet").classList.remove("selectedButton");
 });
 document.getElementById("btnbullet").addEventListener("click", () => {
   celltype = "bullet";
+  document.getElementById("btnbullet").classList.add("selectedButton");
+  document.getElementById("btnland").classList.remove("selectedButton");
 });
