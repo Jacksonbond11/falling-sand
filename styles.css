@@ -3,6 +3,11 @@
   padding: none;
   background-color: #121212;
 }
+button {
+  color: white;
+  width: 100px;
+  height: 100px;
+}
 
 #grid {
   width: 900px;
@@ -20,9 +25,16 @@
   height: 20px;
 }
 
-.clicked {
+.land {
   background-color: #fff;
 }
 .pending {
   background-color: #fff;
+}
+
+.bullet {
+  background-color: red;
+}
+.bulletpending {
+  background-color: red;
 }
